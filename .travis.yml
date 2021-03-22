@@ -14,7 +14,7 @@ after_success:
     - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   # And finally run the SonarCloud analysis - read the "sonar-project.properties"
   # file to see the specific configuration
-  - sonar-scanner -Dsonar.login=“bugwithbutts” -Dsonar.password=“20bytheway02”
+  - sonar-scanner
 cache:
   directories:
   - '$HOME/.m2/repository'
@@ -24,7 +24,4 @@ notifications:
 addons:
   sonarcloud:
     organization: "bugwithbutts"
-    token:
-      secure: "003fa1e52c78f0f694598ad1b415a5b3d8cf9f89" # encrypted value of your token
-
 
