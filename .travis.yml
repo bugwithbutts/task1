@@ -14,7 +14,7 @@ after_success:
     - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   # And finally run the SonarCloud analysis - read the "sonar-project.properties"
   # file to see the specific configuration
-  - sonar-scanner
+  - sonar-scanner -Dsonar.login=“bugwithbutts” -Dsonar.login=“20bytheway02”
 cache:
   directories:
   - '$HOME/.m2/repository'
